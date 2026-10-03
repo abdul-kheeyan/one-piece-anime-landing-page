@@ -1,75 +1,133 @@
-# React + TypeScript + Vite
+# One Piece Adventure Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, cinematic One Piece-inspired fan website built with React, TypeScript, Vite, Tailwind CSS, and Framer Motion. The project presents a rich storytelling experience centered around the Straw Hat Pirates, major story arcs, devil fruits, bounty rankings, and the larger world of the anime universe.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project is designed as a visually immersive landing page and showcase site. It combines interactive navigation, animated transitions, and themed content sections to deliver a polished fan experience inspired by the world of One Piece.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Hero section with cinematic styling and motion effects
+- Crew showcase with member details and bounty information
+- Story arc exploration section
+- Devil fruit gallery with distinct visual accents
+- Bounty and world map-inspired presentation
+- Responsive layout for desktop and mobile devices
+- Tailwind-based styling with custom atmospheric visual design
+- Framer Motion animation for smooth UI transitions
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+- React Icons
+- Lucide React
+- ESLint
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+ONEPEICE/
+├── public/
+├── image/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── common/
+│   │   ├── layout/
+│   │   ├── sections/
+│   │   └── ui/
+│   ├── data/
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── postcss.config.js
+├── tsconfig.json
+├── vite.config.ts
+├── eslint.config.js
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Make sure you have the following installed on your machine:
 
+- Node.js 18 or later
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <your-repository-url>
+cd ONEPEICE
 ```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+4. Open the local URL shown in the terminal to view the project in the browser.
+
+## Available Scripts
+
+```bash
+npm run dev
+```
+Runs the project in development mode with Vite.
+
+```bash
+npm run build
+```
+Builds the application for production.
+
+```bash
+npm run preview
+```
+Serves the production build locally for preview.
+
+```bash
+npm run lint
+```
+Runs ESLint checks for code quality and consistency.
+
+## Design Notes
+
+The interface is intentionally designed to resemble a premium anime-inspired experience, using:
+
+- deep ocean-themed backgrounds
+- layered gradients and radial lighting
+- ambient motion effects
+- strong typography and spacing for storytelling emphasis
+- immersive section-based composition
+
+## Notes
+
+This project is a fan-themed tribute inspired by the world of One Piece and is intended for educational/demo purposes. It is not affiliated with or officially endorsed by the original franchise owners.
+
+## License
+
+This project is currently unlicensed unless otherwise specified by the repository owner.
+
+## Author
+
+Developed as a modern frontend showcase using React and Tailwind CSS.
+
