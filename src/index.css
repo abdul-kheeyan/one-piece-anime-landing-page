@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.92);
+  background-color: #040d15;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(48, 123, 180, 0.18), transparent 32%),
+    linear-gradient(180deg, #040d15 0%, #061822 30%, #081c2b 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.wave {
+  position: absolute;
+  inset-inline: -10%;
+  height: 52%;
+  border-radius: 50% 50% 0 0;
+  background: linear-gradient(180deg, rgba(91, 181, 233, 0.08), rgba(9, 32, 44, 0.32));
+  filter: blur(18px);
+  animation: drift 24s ease-in-out infinite alternate;
+}
+
+.wave-one {
+  bottom: -8%;
+}
+
+.wave-two {
+  bottom: -18%;
+  animation-delay: 1.2s;
+}
+
+.fog {
+  position: absolute;
+  inset: 18% 0 auto;
+  height: 48%;
+  background: radial-gradient(circle, rgba(196, 233, 255, 0.14), transparent 60%);
+  filter: blur(36px);
+  animation: pulse 20s ease-in-out infinite alternate;
+}
+
+@keyframes drift {
+  0% { transform: translate3d(-2%, 0, 0) scaleX(1); }
+  100% { transform: translate3d(2%, 8%, 0) scaleX(1.1); }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; transform: scale(1); }
+  100% { opacity: 0.9; transform: scale(1.08); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
